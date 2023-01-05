@@ -1,0 +1,128 @@
+{
+  "name" : "SignupController.confirmRegistration",
+  "type" : "SAGA",
+  "entities" : {
+    "LdoDUser" : "RW",
+    "RegistrationToken" : "RW",
+    "LdoD" : "RW"
+  },
+  "entitiesPerCluster" : {
+    "User" : [ "LdoDUser", "RegistrationToken" ],
+    "Text" : [ "LdoD" ]
+  },
+  "functionalityRedesigns" : [ {
+    "name" : "Original",
+    "redesign" : [ {
+      "name" : "SignupController.confirmRegistration",
+      "id" : "-1",
+      "cluster" : "SignupController.confirmRegistration",
+      "accessedEntities" : "",
+      "remoteInvocations" : [ 0 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "0: Text",
+      "id" : "0",
+      "cluster" : "Text",
+      "accessedEntities" : [ [ "LdoD", "R" ] ],
+      "remoteInvocations" : [ 1 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "1: User",
+      "id" : "1",
+      "cluster" : "User",
+      "accessedEntities" : [ [ "RegistrationToken", "RW" ], [ "LdoDUser", "RW" ] ],
+      "remoteInvocations" : [ 2 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "2: Text",
+      "id" : "2",
+      "cluster" : "Text",
+      "accessedEntities" : [ [ "LdoD", "W" ] ],
+      "remoteInvocations" : [ ],
+      "type" : "COMPENSATABLE"
+    } ],
+    "localTransactionsCount" : "3",
+    "initialLTsCount" : "3",
+    "sequenceChangeCount" : "0",
+    "mergedLTsCount" : "0",
+    "pivotTransaction" : "-1"
+  }, {
+    "name" : "confirmRegistration (default)",
+    "redesign" : [ {
+      "name" : "SignupController.confirmRegistration",
+      "id" : "-1",
+      "cluster" : "SignupController.confirmRegistration",
+      "accessedEntities" : "",
+      "remoteInvocations" : [ 0 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "0: Text",
+      "id" : "0",
+      "cluster" : "Text",
+      "accessedEntities" : [ [ "LdoD", "R" ] ],
+      "remoteInvocations" : [ 1 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "1: User",
+      "id" : "1",
+      "cluster" : "User",
+      "accessedEntities" : [ [ "RegistrationToken", "R" ], [ "LdoDUser", "R" ], [ "LdoDUser", "W" ], [ "RegistrationToken", "W" ] ],
+      "remoteInvocations" : [ 2 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "2: Text",
+      "id" : "2",
+      "cluster" : "Text",
+      "accessedEntities" : [ [ "LdoD", "W" ] ],
+      "remoteInvocations" : [ ],
+      "type" : "COMPENSATABLE"
+    } ],
+    "systemComplexity" : "106.0",
+    "functionalityComplexity" : "67.0",
+    "coupling" : "2.0",
+    "localTransactionsCount" : "3",
+    "initialLTsCount" : "0",
+    "sequenceChangeCount" : "0",
+    "mergedLTsCount" : "0",
+    "pivotTransaction" : "-1"
+  }, {
+    "name" : "confirmRegistration",
+    "redesign" : [ {
+      "name" : "SignupController.confirmRegistration",
+      "id" : "-1",
+      "cluster" : "SignupController.confirmRegistration",
+      "accessedEntities" : "",
+      "remoteInvocations" : [ 0 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "0: Text",
+      "id" : "0",
+      "cluster" : "Text",
+      "accessedEntities" : [ [ "LdoD", "R" ] ],
+      "remoteInvocations" : [ 1 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "1: User",
+      "id" : "1",
+      "cluster" : "User",
+      "accessedEntities" : [ [ "RegistrationToken", "R" ], [ "LdoDUser", "R" ], [ "LdoDUser", "W" ], [ "RegistrationToken", "W" ] ],
+      "remoteInvocations" : [ 2 ],
+      "type" : "PIVOT"
+    }, {
+      "name" : "2: Text",
+      "id" : "2",
+      "cluster" : "Text",
+      "accessedEntities" : [ [ "LdoD", "W" ] ],
+      "remoteInvocations" : [ ],
+      "type" : "RETRIABLE"
+    } ],
+    "systemComplexity" : "0.0",
+    "functionalityComplexity" : "64.0",
+    "coupling" : "2.0",
+    "localTransactionsCount" : "3",
+    "initialLTsCount" : "0",
+    "sequenceChangeCount" : "0",
+    "mergedLTsCount" : "0",
+    "pivotTransaction" : "-1"
+  } ]
+}

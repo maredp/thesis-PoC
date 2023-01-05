@@ -1,0 +1,175 @@
+{
+  "name" : "GoalModelController.associateDefPathConditionToGoalAct",
+  "type" : "SAGA",
+  "entities" : {
+    "Path" : "RW",
+    "GoalModel" : "R",
+    "Goal" : "RW",
+    "DefPathCondition" : "RW",
+    "BlendedWorkflow" : "RW",
+    "DataModel" : "RW",
+    "DefProductCondition" : "RW",
+    "Specification" : "R"
+  },
+  "entitiesPerCluster" : {
+    "Design" : [ "Path", "BlendedWorkflow", "DataModel", "Specification" ],
+    "Models" : [ "GoalModel", "Goal", "DefPathCondition", "DefProductCondition" ]
+  },
+  "functionalityRedesigns" : [ {
+    "name" : "Original",
+    "redesign" : [ {
+      "name" : "GoalModelController.associateDefPathConditionToGoalAct",
+      "id" : "-1",
+      "cluster" : "GoalModelController.associateDefPathConditionToGoalAct",
+      "accessedEntities" : "",
+      "remoteInvocations" : [ 0 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "0: Design",
+      "id" : "0",
+      "cluster" : "Design",
+      "accessedEntities" : [ [ "BlendedWorkflow", "RW" ], [ "Specification", "R" ] ],
+      "remoteInvocations" : [ 1 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "1: Models",
+      "id" : "1",
+      "cluster" : "Models",
+      "accessedEntities" : [ [ "GoalModel", "R" ], [ "Goal", "R" ] ],
+      "remoteInvocations" : [ 2 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "2: Design",
+      "id" : "2",
+      "cluster" : "Design",
+      "accessedEntities" : [ [ "Specification", "R" ], [ "DataModel", "R" ] ],
+      "remoteInvocations" : [ 3 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "3: Models",
+      "id" : "3",
+      "cluster" : "Models",
+      "accessedEntities" : [ [ "DefPathCondition", "R" ] ],
+      "remoteInvocations" : [ 4 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "4: Design",
+      "id" : "4",
+      "cluster" : "Design",
+      "accessedEntities" : [ [ "Path", "RW" ], [ "Specification", "R" ], [ "DataModel", "RW" ] ],
+      "remoteInvocations" : [ 5 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "5: Models",
+      "id" : "5",
+      "cluster" : "Models",
+      "accessedEntities" : [ [ "DefProductCondition", "W" ] ],
+      "remoteInvocations" : [ 6 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "6: Design",
+      "id" : "6",
+      "cluster" : "Design",
+      "accessedEntities" : [ [ "Path", "W" ], [ "Specification", "R" ], [ "DataModel", "R" ] ],
+      "remoteInvocations" : [ 7 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "7: Models",
+      "id" : "7",
+      "cluster" : "Models",
+      "accessedEntities" : [ [ "DefPathCondition", "W" ] ],
+      "remoteInvocations" : [ 8 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "8: Design",
+      "id" : "8",
+      "cluster" : "Design",
+      "accessedEntities" : [ [ "DataModel", "W" ] ],
+      "remoteInvocations" : [ 9 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "9: Models",
+      "id" : "9",
+      "cluster" : "Models",
+      "accessedEntities" : [ [ "Goal", "W" ], [ "DefPathCondition", "W" ], [ "DefProductCondition", "R" ] ],
+      "remoteInvocations" : [ 10 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "10: Design",
+      "id" : "10",
+      "cluster" : "Design",
+      "accessedEntities" : [ [ "Path", "R" ] ],
+      "remoteInvocations" : [ ],
+      "type" : "COMPENSATABLE"
+    } ],
+    "localTransactionsCount" : "11",
+    "initialLTsCount" : "11",
+    "sequenceChangeCount" : "0",
+    "mergedLTsCount" : "0",
+    "pivotTransaction" : "-1"
+  }, {
+    "name" : "associateDefPathConditionToGoalAct (default)",
+    "redesign" : [ {
+      "name" : "GoalModelController.associateDefPathConditionToGoalAct",
+      "id" : "-1",
+      "cluster" : "GoalModelController.associateDefPathConditionToGoalAct",
+      "accessedEntities" : "",
+      "remoteInvocations" : [ 0 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "0: Design",
+      "id" : "0",
+      "cluster" : "Design",
+      "accessedEntities" : [ [ "Path", "RW" ], [ "BlendedWorkflow", "RW" ], [ "DataModel", "RW" ], [ "Specification", "R" ] ],
+      "remoteInvocations" : [ 1 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "1: Models",
+      "id" : "1",
+      "cluster" : "Models",
+      "accessedEntities" : [ [ "GoalModel", "R" ], [ "Goal", "RW" ], [ "DefPathCondition", "RW" ], [ "DefProductCondition", "RW" ] ],
+      "remoteInvocations" : [ ],
+      "type" : "COMPENSATABLE"
+    } ],
+    "systemComplexity" : "291.0",
+    "functionalityComplexity" : "223.0",
+    "coupling" : "1.0",
+    "localTransactionsCount" : "2",
+    "initialLTsCount" : "0",
+    "sequenceChangeCount" : "0",
+    "mergedLTsCount" : "0",
+    "pivotTransaction" : "-1"
+  }, {
+    "name" : "associateDefPathConditionToGoalAct",
+    "redesign" : [ {
+      "name" : "GoalModelController.associateDefPathConditionToGoalAct",
+      "id" : "-1",
+      "cluster" : "GoalModelController.associateDefPathConditionToGoalAct",
+      "accessedEntities" : "",
+      "remoteInvocations" : [ 0 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "0: Design",
+      "id" : "0",
+      "cluster" : "Design",
+      "accessedEntities" : [ [ "Path", "RW" ], [ "BlendedWorkflow", "RW" ], [ "DataModel", "RW" ], [ "Specification", "R" ] ],
+      "remoteInvocations" : [ 1 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "1: Models",
+      "id" : "1",
+      "cluster" : "Models",
+      "accessedEntities" : [ [ "GoalModel", "R" ], [ "Goal", "RW" ], [ "DefPathCondition", "RW" ], [ "DefProductCondition", "RW" ] ],
+      "remoteInvocations" : [ ],
+      "type" : "PIVOT"
+    } ],
+    "systemComplexity" : "186.0",
+    "functionalityComplexity" : "220.0",
+    "coupling" : "1.0",
+    "localTransactionsCount" : "2",
+    "initialLTsCount" : "0",
+    "sequenceChangeCount" : "0",
+    "mergedLTsCount" : "0",
+    "pivotTransaction" : "-1"
+  } ]
+}

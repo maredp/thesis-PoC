@@ -1,0 +1,251 @@
+{
+  "name" : "VirtualEditionController.submitParticipation",
+  "type" : "SAGA",
+  "entities" : {
+    "LdoDUser" : "RW",
+    "VirtualEdition" : "RW",
+    "Member" : "RW"
+  },
+  "entitiesPerCluster" : {
+    "User" : [
+      "LdoDUser"
+    ],
+    "VirtualEdition" : [
+      "VirtualEdition",
+      "Member"
+    ]
+  },
+  "functionalityRedesigns" : [
+    {
+      "name" : "Original",
+      "redesign" : [
+        {
+          "name" : "VirtualEditionController.submitParticipation",
+          "id" : "-1",
+          "cluster" : "VirtualEditionController.submitParticipation",
+          "accessedEntities" : "",
+          "remoteInvocations" : [
+            0
+          ],
+          "type" : "COMPENSATABLE"
+        },
+        {
+          "name" : "0: VirtualEdition",
+          "id" : "0",
+          "cluster" : "VirtualEdition",
+          "accessedEntities" : [
+            [
+              "VirtualEdition",
+              "R"
+            ]
+          ],
+          "remoteInvocations" : [
+            1
+          ],
+          "type" : "COMPENSATABLE"
+        },
+        {
+          "name" : "1: User",
+          "id" : "1",
+          "cluster" : "User",
+          "accessedEntities" : [
+            [
+              "LdoDUser",
+              "R"
+            ]
+          ],
+          "remoteInvocations" : [
+            2
+          ],
+          "type" : "COMPENSATABLE"
+        },
+        {
+          "name" : "2: VirtualEdition",
+          "id" : "2",
+          "cluster" : "VirtualEdition",
+          "accessedEntities" : [
+            [
+              "VirtualEdition",
+              "R"
+            ],
+            [
+              "Member",
+              "R"
+            ]
+          ],
+          "remoteInvocations" : [
+            3
+          ],
+          "type" : "COMPENSATABLE"
+        },
+        {
+          "name" : "3: User",
+          "id" : "3",
+          "cluster" : "User",
+          "accessedEntities" : [
+            [
+              "LdoDUser",
+              "R"
+            ]
+          ],
+          "remoteInvocations" : [
+            4
+          ],
+          "type" : "COMPENSATABLE"
+        },
+        {
+          "name" : "4: VirtualEdition",
+          "id" : "4",
+          "cluster" : "VirtualEdition",
+          "accessedEntities" : [
+            [
+              "Member",
+              "W"
+            ],
+            [
+              "VirtualEdition",
+              "W"
+            ]
+          ],
+          "remoteInvocations" : [
+            5
+          ],
+          "type" : "COMPENSATABLE"
+        },
+        {
+          "name" : "5: User",
+          "id" : "5",
+          "cluster" : "User",
+          "accessedEntities" : [
+            [
+              "LdoDUser",
+              "W"
+            ]
+          ],
+          "remoteInvocations" : [
+            6
+          ],
+          "type" : "COMPENSATABLE"
+        },
+        {
+          "name" : "6: VirtualEdition",
+          "id" : "6",
+          "cluster" : "VirtualEdition",
+          "accessedEntities" : [
+            [
+              "Member",
+              "W"
+            ]
+          ],
+          "remoteInvocations" : [ ],
+          "type" : "COMPENSATABLE"
+        }
+      ],
+      "systemComplexity" : "152.0",
+      "functionalityComplexity" : "169.0",
+      "coupling" : "6.0",
+      "localTransactionsCount" : "7",
+      "initialLTsCount" : "7",
+      "sequenceChangeCount" : "0",
+      "mergedLTsCount" : "0",
+      "operationsApplied" : [ ],
+      "pivotTransaction" : "-1"
+    },
+    {
+      "name" : "Optimal for applying operations",
+      "redesign" : [
+        {
+          "name" : "VirtualEditionController.submitParticipation",
+          "id" : "-1",
+          "cluster" : "VirtualEditionController.submitParticipation",
+          "accessedEntities" : "",
+          "remoteInvocations" : [
+            0
+          ],
+          "type" : "COMPENSATABLE"
+        },
+        {
+          "name" : "0: VirtualEdition",
+          "id" : "0",
+          "cluster" : "VirtualEdition",
+          "accessedEntities" : [
+            [
+              "VirtualEdition",
+              "R"
+            ],
+            [
+              "Member",
+              "R"
+            ]
+          ],
+          "remoteInvocations" : [
+            1
+          ],
+          "type" : "COMPENSATABLE"
+        },
+        {
+          "name" : "1: User",
+          "id" : "1",
+          "cluster" : "User",
+          "accessedEntities" : [
+            [
+              "LdoDUser",
+              "R"
+            ]
+          ],
+          "remoteInvocations" : [
+            4
+          ],
+          "type" : "COMPENSATABLE"
+        },
+        {
+          "name" : "4: VirtualEdition",
+          "id" : "4",
+          "cluster" : "VirtualEdition",
+          "accessedEntities" : [
+            [
+              "Member",
+              "W"
+            ],
+            [
+              "VirtualEdition",
+              "W"
+            ]
+          ],
+          "remoteInvocations" : [
+            5
+          ],
+          "type" : "COMPENSATABLE"
+        },
+        {
+          "name" : "5: User",
+          "id" : "5",
+          "cluster" : "User",
+          "accessedEntities" : [
+            [
+              "LdoDUser",
+              "W"
+            ]
+          ],
+          "remoteInvocations" : [ ],
+          "type" : "COMPENSATABLE"
+        }
+      ],
+      "systemComplexity" : "129.0",
+      "functionalityComplexity" : "92.0",
+      "coupling" : "3.0",
+      "localTransactionsCount" : "4",
+      "initialLTsCount" : "7",
+      "sequenceChangeCount" : "2",
+      "mergedLTsCount" : "3",
+      "operationsApplied" : [
+        "[SC 2 - 0]",
+        "[LTM 0 - 2]",
+        "[LTM 1 - 3]",
+        "[SC 6 - 1]",
+        "[LTM 4 - 6]"
+      ],
+      "pivotTransaction" : "-1"
+    }
+  ]
+}

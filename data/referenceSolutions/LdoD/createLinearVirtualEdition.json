@@ -1,0 +1,66 @@
+{
+      "redesign" : [ {
+        "name" : "RecommendationController.createLinearVirtualEdition",
+        "id" : "-1",
+        "cluster" : "RecommendationController.createLinearVirtualEdition",
+        "accessedEntities" : "",
+        "remoteInvocations" : [ 0 ],
+        "type" : "COMPENSATABLE"
+      }, {
+        "name" : "0: VirtualEdition",
+        "id" : "0",
+        "cluster" : "VirtualEdition",
+        "accessedEntities" : "[[\"VirtualEdition\",\"R\"],[\"Member\",\"R\"]]",
+        "remoteInvocations" : [ 1 ],
+        "type" : "COMPENSATABLE"
+      }, {
+        "name" : "1: Text",
+        "id" : "1",
+        "cluster" : "Text",
+        "accessedEntities" : "[[\"ExpertEdition\",\"R\"],[\"LdoD\",\"R\"],[\"Edition\",\"R\"]]",
+        "remoteInvocations" : [ 2 ],
+        "type" : "COMPENSATABLE"
+      }, {
+        "name" : "2: User",
+        "id" : "2",
+        "cluster" : "User",
+        "accessedEntities" : "[[\"LdoDUser\",\"R\"]]",
+        "remoteInvocations" : [ 3 ],
+        "type" : "COMPENSATABLE"
+      }, {
+        "name" : "4: Text",
+        "id" : "4",
+        "cluster" : "Text",
+        "accessedEntities" : "[[\"ExpertEdition\",\"R\"],[\"ExpertEditionInter\",\"R\"],[\"LdoD\",\"RW\"],[\"LdoDDate\",\"W\"],[\"Heteronym\",\"W\"],[\"Fragment\",\"RW\"],[\"Edition\",\"W\"],[\"FragInter\",\"RW\"]]",
+        "remoteInvocations" : [ 6 ],
+        "type" : "PIVOT"
+      }, {
+        "name" : "3: VirtualEdition",
+        "id" : "3",
+        "cluster" : "VirtualEdition",
+        "accessedEntities" : "[[\"VirtualEditionInter\",\"RW\"],[\"Taxonomy\",\"W\"],[\"VirtualEdition\",\"RW\"],[\"Member\",\"RW\"],[\"Section\",\"RW\"]]",
+        "remoteInvocations" : [ 5, 4 ],
+        "type" : "COMPENSATABLE"
+      }, {
+        "name" : "5: User",
+        "id" : "5",
+        "cluster" : "User",
+        "accessedEntities" : "[[\"LdoDUser\",\"RW\"]]",
+        "remoteInvocations" : [ ],
+        "type" : "COMPENSATABLE"
+      }, {
+        "name" : "6: VirtualEdition",
+        "id" : "6",
+        "cluster" : "VirtualEdition",
+        "accessedEntities" : "[[\"VirtualEditionInter\",\"RW\"],[\"VirtualEdition\",\"RW\"],[\"Section\",\"RW\"]]",
+        "remoteInvocations" : [ 49 ],
+        "type" : "RETRIABLE"
+      }, {
+        "name" : "49: Text",
+        "id" : "49",
+        "cluster" : "Text",
+        "accessedEntities" : "[[\"ExpertEditionInter\",\"R\"],[\"ExpertEdition\",\"R\"],[\"LdoDDate\",\"W\"],[\"Heteronym\",\"W\"],[\"Fragment\",\"RW\"],[\"FragInter\",\"RW\"]]",
+        "remoteInvocations" : [ ],
+        "type" : "RETRIABLE"
+      } ]
+}

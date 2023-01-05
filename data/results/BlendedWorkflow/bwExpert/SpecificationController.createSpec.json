@@ -1,0 +1,148 @@
+{
+  "name" : "SpecificationController.createSpec",
+  "type" : "SAGA",
+  "entities" : {
+    "GoalModel" : "W",
+    "ConditionModel" : "W",
+    "BlendedWorkflow" : "RW",
+    "ActivityModel" : "W",
+    "DataModel" : "W",
+    "Specification" : "RW"
+  },
+  "entitiesPerCluster" : {
+    "Design" : [ "BlendedWorkflow", "DataModel", "Specification" ],
+    "Models" : [ "GoalModel", "ConditionModel", "ActivityModel" ]
+  },
+  "functionalityRedesigns" : [ {
+    "name" : "Original",
+    "redesign" : [ {
+      "name" : "SpecificationController.createSpec",
+      "id" : "-1",
+      "cluster" : "SpecificationController.createSpec",
+      "accessedEntities" : "",
+      "remoteInvocations" : [ 0 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "0: Design",
+      "id" : "0",
+      "cluster" : "Design",
+      "accessedEntities" : [ [ "BlendedWorkflow", "RW" ], [ "Specification", "RW" ], [ "DataModel", "W" ] ],
+      "remoteInvocations" : [ 1 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "1: Models",
+      "id" : "1",
+      "cluster" : "Models",
+      "accessedEntities" : [ [ "ConditionModel", "W" ] ],
+      "remoteInvocations" : [ 2 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "2: Design",
+      "id" : "2",
+      "cluster" : "Design",
+      "accessedEntities" : [ [ "Specification", "W" ] ],
+      "remoteInvocations" : [ 3 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "3: Models",
+      "id" : "3",
+      "cluster" : "Models",
+      "accessedEntities" : [ [ "ActivityModel", "W" ] ],
+      "remoteInvocations" : [ 4 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "4: Design",
+      "id" : "4",
+      "cluster" : "Design",
+      "accessedEntities" : [ [ "Specification", "W" ] ],
+      "remoteInvocations" : [ 5 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "5: Models",
+      "id" : "5",
+      "cluster" : "Models",
+      "accessedEntities" : [ [ "GoalModel", "W" ] ],
+      "remoteInvocations" : [ 6 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "6: Design",
+      "id" : "6",
+      "cluster" : "Design",
+      "accessedEntities" : [ [ "BlendedWorkflow", "RW" ], [ "Specification", "W" ] ],
+      "remoteInvocations" : [ ],
+      "type" : "COMPENSATABLE"
+    } ],
+    "systemComplexity" : "632.0",
+    "functionalityComplexity" : "169.0",
+    "coupling" : "6.0",
+    "localTransactionsCount" : "7",
+    "initialLTsCount" : "7",
+    "sequenceChangeCount" : "0",
+    "mergedLTsCount" : "0",
+    "pivotTransaction" : "-1"
+  }, {
+    "name" : "Optimal for applying operations",
+    "redesign" : [ {
+      "name" : "SpecificationController.createSpec",
+      "id" : "-1",
+      "cluster" : "SpecificationController.createSpec",
+      "accessedEntities" : "",
+      "remoteInvocations" : [ 0 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "0: Design",
+      "id" : "0",
+      "cluster" : "Design",
+      "accessedEntities" : [ [ "BlendedWorkflow", "RW" ], [ "Specification", "RW" ], [ "DataModel", "W" ] ],
+      "remoteInvocations" : [ 1 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "1: Models",
+      "id" : "1",
+      "cluster" : "Models",
+      "accessedEntities" : [ [ "ConditionModel", "W" ], [ "ActivityModel", "W" ], [ "GoalModel", "W" ] ],
+      "remoteInvocations" : [ ],
+      "type" : "COMPENSATABLE"
+    } ],
+    "systemComplexity" : "320.0",
+    "functionalityComplexity" : "87.0",
+    "coupling" : "1.0",
+    "localTransactionsCount" : "2",
+    "initialLTsCount" : "7",
+    "sequenceChangeCount" : "3",
+    "mergedLTsCount" : "5",
+    "pivotTransaction" : "-1"
+  }, {
+    "name" : "Optimal for LTs characterization",
+    "redesign" : [ {
+      "name" : "SpecificationController.createSpec",
+      "id" : "-1",
+      "cluster" : "SpecificationController.createSpec",
+      "accessedEntities" : "",
+      "remoteInvocations" : [ 0 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "0: Design",
+      "id" : "0",
+      "cluster" : "Design",
+      "accessedEntities" : [ [ "BlendedWorkflow", "RW" ], [ "Specification", "RW" ], [ "DataModel", "W" ] ],
+      "remoteInvocations" : [ 1 ],
+      "type" : "PIVOT"
+    }, {
+      "name" : "1: Models",
+      "id" : "1",
+      "cluster" : "Models",
+      "accessedEntities" : [ [ "ConditionModel", "W" ], [ "ActivityModel", "W" ], [ "GoalModel", "W" ] ],
+      "remoteInvocations" : [ ],
+      "type" : "RETRIABLE"
+    } ],
+    "systemComplexity" : "0.0",
+    "functionalityComplexity" : "81.0",
+    "coupling" : "1.0",
+    "localTransactionsCount" : "2",
+    "initialLTsCount" : "7",
+    "sequenceChangeCount" : "3",
+    "mergedLTsCount" : "5",
+    "pivotTransaction" : "0"
+  } ]
+}

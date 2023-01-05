@@ -1,0 +1,301 @@
+{
+	"info": {
+		"_postman_id": "8c6de10a-1b19-47f0-b9a2-534a861e4e4b",
+		"name": "thesisPoC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Perform redesign",
+			"item": [
+				{
+					"name": "Redesign functionality",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"limit\": {{Limit for each recursive application of operations}},\n    \"hashing\": {{Boolean for whether to speed up redesign by using hashing optimization}},\n    \"saveSolutionSet\": {{Boolean for whether to save the set of solutions as data points}},\n    \"applyOperations\": {{Boolean for whether to apply operations during redesign}},\n    \"characterizeLTs\": {{Boolean for whether to characterize LTs during redesign}},\n    \"orchestration\": {{Boolean for whether to add orchestrator during redesign}},\n    \"funcComplexityWeight\": {{Weight for functionality complexity metric}},\n    \"systemComplexityWeight\": {{Weight for system complexity metric}},\n    \"queryComplexityWeight\": {{Weight for query complexity metric}},\n    \"invocationsWeight\": {{Weight for performance metric}}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/redesign/codebase/{{codebaseName}}/decomposition/{{decompositionName}}/functionality/{{functionalityName}}/redesignFunctionality",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"redesign",
+								"codebase",
+								"{{codebaseName}}",
+								"decomposition",
+								"{{decompositionName}}",
+								"functionality",
+								"{{functionalityName}}",
+								"redesignFunctionality"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Redesign functionality default",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"applyOperations\": 1,\n    \"characterizeLTs\": 1,\n    \"orchestration\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/redesign/codebase/LdoD/decomposition/ldodExpert/functionality/VirtualEditionController.approveParticipant/redesignFunctionality",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"redesign",
+										"codebase",
+										"LdoD",
+										"decomposition",
+										"ldodExpert",
+										"functionality",
+										"VirtualEditionController.approveParticipant",
+										"redesignFunctionality"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Redesign functionality with weights",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"applyOperations\": 1,\n    \"characterizeLTs\": 1,\n    \"orchestration\": 1,\n    \"funcComplexityWeight\": 0.33,\n    \"systemComplexityWeight\": 0.33,\n    \"queryComplexityWeight\": 0,\n    \"invocationsWeight\": 0.33\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/redesign/codebase/LdoD/decomposition/ldodExpert/functionality/VirtualEditionController.approveParticipant/redesignFunctionality",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"redesign",
+										"codebase",
+										"LdoD",
+										"decomposition",
+										"ldodExpert",
+										"functionality",
+										"VirtualEditionController.approveParticipant",
+										"redesignFunctionality"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Redesign functionality fast",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"limit\": 2,\n    \"applyOperations\": 1,\n    \"characterizeLTs\": 1,\n    \"orchestration\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/redesign/codebase/LdoD/decomposition/ldodExpert/functionality/VirtualEditionController.approveParticipant/redesignFunctionality",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"redesign",
+										"codebase",
+										"LdoD",
+										"decomposition",
+										"ldodExpert",
+										"functionality",
+										"VirtualEditionController.approveParticipant",
+										"redesignFunctionality"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Add redesign",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"filePath\": {{File path for the redesign to add}},\n    \"doRedesign\": {{Boolean for whether to further redesign the added redesign}}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/redesign/codebase/{{codebaseName}}/decomposition/{{decompositionName}}/functionality/{{functionalityName}}/addRedesign/{{redesignName}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"redesign",
+								"codebase",
+								"{{codebaseName}}",
+								"decomposition",
+								"{{decompositionName}}",
+								"functionality",
+								"{{functionalityName}}",
+								"addRedesign",
+								"{{redesignName}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add redesign",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"filePath\": \"\",\n    \"doRedesign\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/redesign/codebase/LdoD/decomposition/ldodExpert/functionality/VirtualEditionController.approveParticipant/addRedesign/approveParticipant",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"redesign",
+										"codebase",
+										"LdoD",
+										"decomposition",
+										"ldodExpert",
+										"functionality",
+										"VirtualEditionController.approveParticipant",
+										"addRedesign",
+										"approveParticipant"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080",
+			"type": "default"
+		},
+		{
+			"key": "codebaseName",
+			"value": ""
+		},
+		{
+			"key": "decompositionName",
+			"value": ""
+		},
+		{
+			"key": "functionalityName",
+			"value": ""
+		}
+	]
+}

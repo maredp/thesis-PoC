@@ -1,0 +1,192 @@
+{
+  "name" : "GoalModelController.updateView",
+  "type" : "SAGA",
+  "entities" : {
+    "GoalModel" : "R",
+    "Goal" : "RW",
+    "Position" : "RW",
+    "BlendedWorkflow" : "RW",
+    "Specification" : "R",
+    "View" : "W",
+    "GoalView" : "RW"
+  },
+  "entitiesPerCluster" : {
+    "Design" : [ "BlendedWorkflow", "Specification" ],
+    "Models" : [ "GoalModel", "Goal" ],
+    "View" : [ "Position", "View", "GoalView" ]
+  },
+  "functionalityRedesigns" : [ {
+    "name" : "Original",
+    "redesign" : [ {
+      "name" : "GoalModelController.updateView",
+      "id" : "-1",
+      "cluster" : "GoalModelController.updateView",
+      "accessedEntities" : "",
+      "remoteInvocations" : [ 0 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "0: Design",
+      "id" : "0",
+      "cluster" : "Design",
+      "accessedEntities" : [ [ "BlendedWorkflow", "RW" ], [ "Specification", "R" ] ],
+      "remoteInvocations" : [ 1 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "1: Models",
+      "id" : "1",
+      "cluster" : "Models",
+      "accessedEntities" : [ [ "GoalModel", "R" ], [ "Goal", "R" ] ],
+      "remoteInvocations" : [ 2 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "2: View",
+      "id" : "2",
+      "cluster" : "View",
+      "accessedEntities" : [ [ "GoalView", "RW" ], [ "Position", "W" ] ],
+      "remoteInvocations" : [ 3 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "3: Models",
+      "id" : "3",
+      "cluster" : "Models",
+      "accessedEntities" : [ [ "Goal", "W" ] ],
+      "remoteInvocations" : [ 4 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "4: View",
+      "id" : "4",
+      "cluster" : "View",
+      "accessedEntities" : [ [ "View", "W" ], [ "Position", "W" ] ],
+      "remoteInvocations" : [ 5 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "5: Models",
+      "id" : "5",
+      "cluster" : "Models",
+      "accessedEntities" : [ [ "Goal", "R" ] ],
+      "remoteInvocations" : [ 6 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "6: View",
+      "id" : "6",
+      "cluster" : "View",
+      "accessedEntities" : [ [ "GoalView", "R" ], [ "Position", "RW" ] ],
+      "remoteInvocations" : [ 7 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "7: Models",
+      "id" : "7",
+      "cluster" : "Models",
+      "accessedEntities" : [ [ "Goal", "R" ] ],
+      "remoteInvocations" : [ 8 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "8: View",
+      "id" : "8",
+      "cluster" : "View",
+      "accessedEntities" : [ [ "GoalView", "R" ], [ "Position", "RW" ] ],
+      "remoteInvocations" : [ ],
+      "type" : "COMPENSATABLE"
+    } ],
+    "systemComplexity" : "211.0",
+    "functionalityComplexity" : "204.0",
+    "coupling" : "8.0",
+    "localTransactionsCount" : "9",
+    "initialLTsCount" : "9",
+    "sequenceChangeCount" : "0",
+    "mergedLTsCount" : "0",
+    "pivotTransaction" : "-1"
+  }, {
+    "name" : "Optimal for applying operations",
+    "redesign" : [ {
+      "name" : "GoalModelController.updateView",
+      "id" : "-1",
+      "cluster" : "GoalModelController.updateView",
+      "accessedEntities" : "",
+      "remoteInvocations" : [ 0 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "0: Design",
+      "id" : "0",
+      "cluster" : "Design",
+      "accessedEntities" : [ [ "BlendedWorkflow", "RW" ], [ "Specification", "R" ] ],
+      "remoteInvocations" : [ 1, 2 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "1: Models",
+      "id" : "1",
+      "cluster" : "Models",
+      "accessedEntities" : [ [ "GoalModel", "R" ], [ "Goal", "R" ] ],
+      "remoteInvocations" : [ ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "2: View",
+      "id" : "2",
+      "cluster" : "View",
+      "accessedEntities" : [ [ "GoalView", "RW" ], [ "Position", "RW" ], [ "View", "W" ] ],
+      "remoteInvocations" : [ 3 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "3: Models",
+      "id" : "3",
+      "cluster" : "Models",
+      "accessedEntities" : [ [ "Goal", "W" ] ],
+      "remoteInvocations" : [ ],
+      "type" : "COMPENSATABLE"
+    } ],
+    "systemComplexity" : "154.0",
+    "functionalityComplexity" : "135.0",
+    "coupling" : "3.0",
+    "localTransactionsCount" : "4",
+    "initialLTsCount" : "9",
+    "sequenceChangeCount" : "4",
+    "mergedLTsCount" : "5",
+    "pivotTransaction" : "-1"
+  }, {
+    "name" : "Optimal for LTs characterization",
+    "redesign" : [ {
+      "name" : "GoalModelController.updateView",
+      "id" : "-1",
+      "cluster" : "GoalModelController.updateView",
+      "accessedEntities" : "",
+      "remoteInvocations" : [ 0 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "0: Design",
+      "id" : "0",
+      "cluster" : "Design",
+      "accessedEntities" : [ [ "BlendedWorkflow", "RW" ], [ "Specification", "R" ] ],
+      "remoteInvocations" : [ 1, 2 ],
+      "type" : "PIVOT"
+    }, {
+      "name" : "1: Models",
+      "id" : "1",
+      "cluster" : "Models",
+      "accessedEntities" : [ [ "GoalModel", "R" ], [ "Goal", "R" ] ],
+      "remoteInvocations" : [ ],
+      "type" : "RETRIABLE"
+    }, {
+      "name" : "2: View",
+      "id" : "2",
+      "cluster" : "View",
+      "accessedEntities" : [ [ "GoalView", "RW" ], [ "Position", "RW" ], [ "View", "W" ] ],
+      "remoteInvocations" : [ 3 ],
+      "type" : "RETRIABLE"
+    }, {
+      "name" : "3: Models",
+      "id" : "3",
+      "cluster" : "Models",
+      "accessedEntities" : [ [ "Goal", "W" ] ],
+      "remoteInvocations" : [ ],
+      "type" : "RETRIABLE"
+    } ],
+    "systemComplexity" : "0.0",
+    "functionalityComplexity" : "130.0",
+    "coupling" : "3.0",
+    "localTransactionsCount" : "4",
+    "initialLTsCount" : "9",
+    "sequenceChangeCount" : "4",
+    "mergedLTsCount" : "5",
+    "pivotTransaction" : "0"
+  } ]
+}

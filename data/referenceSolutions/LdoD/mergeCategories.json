@@ -1,0 +1,71 @@
+{
+    "redesign" : [ {
+      "name" : "VirtualEditionController.mergeCategories",
+      "id" : "-1",
+      "cluster" : "VirtualEditionController.mergeCategories",
+      "accessedEntities" : "",
+      "remoteInvocations" : [ 0 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "14: User",
+      "id" : "14",
+      "cluster" : "User",
+      "accessedEntities" : "[[\"LdoDUser\",\"W\"]]",
+      "remoteInvocations" : [ ],
+      "type" : "RETRIABLE"
+    }, {
+      "name" : "17: User",
+      "id" : "17",
+      "cluster" : "User",
+      "accessedEntities" : "[[\"LdoDUser\",\"W\"]]",
+      "remoteInvocations" : [ ],
+      "type" : "RETRIABLE"
+    }, {
+      "name" : "30: User",
+      "id" : "30",
+      "cluster" : "User",
+      "accessedEntities" : "[[\"LdoDUser\",\"W\"]]",
+      "remoteInvocations" : [ ],
+      "type" : "RETRIABLE"
+    }, {
+      "name" : "1: User",
+      "id" : "1",
+      "cluster" : "User",
+      "accessedEntities" : "[[\"LdoDUser\",\"W\"]]",
+      "remoteInvocations" : [ ],
+      "type" : "RETRIABLE"
+    }, {
+      "name" : "0: VirtualEdition",
+      "id" : "0",
+      "cluster" : "VirtualEdition",
+      "accessedEntities" : "[[\"Category\",\"RW\"],[\"VirtualEditionInter\",\"W\"],[\"Taxonomy\",\"RW\"],[\"VirtualEdition\",\"RW\"],[\"Tag\",\"RW\"],[\"HumanAnnotation\",\"W\"]]",
+      "remoteInvocations" : [ 2, 1 ],
+      "type" : "PIVOT"
+    }, {
+      "name" : "2: ClassificationGame",
+      "id" : "2",
+      "cluster" : "ClassificationGame",
+      "accessedEntities" : "[[\"Player\",\"W\"],[\"ClassificationGameRound\",\"RW\"],[\"ClassificationGameParticipant\",\"RW\"],[\"ClassificationGame\",\"RW\"]]",
+      "remoteInvocations" : [ 14, 3 ],
+      "type" : "RETRIABLE"
+    }, {
+      "name" : "3: VirtualEdition",
+      "id" : "3",
+      "cluster" : "VirtualEdition",
+      "accessedEntities" : "[[\"Category\",\"W\"],[\"VirtualEditionInter\",\"W\"],[\"Taxonomy\",\"W\"],[\"VirtualEdition\",\"RW\"],[\"Tag\",\"RW\"],[\"HumanAnnotation\",\"W\"]]",
+      "remoteInvocations" : [ 4, 17 ],
+      "type" : "RETRIABLE"
+    }, {
+      "name" : "4: ClassificationGame",
+      "id" : "4",
+      "cluster" : "ClassificationGame",
+      "accessedEntities" : "[[\"Player\",\"W\"],[\"ClassificationGameRound\",\"RW\"],[\"ClassificationGameParticipant\",\"RW\"],[\"ClassificationGame\",\"RW\"]]",
+      "remoteInvocations" : [ 30 ],
+      "type" : "RETRIABLE"
+    } ],
+    "systemComplexity" : 0,
+    "functionalityComplexity" : 253,
+    "inconsistencyComplexity" : 0,
+    "pivotTransaction" : "0"
+  } ]
+}

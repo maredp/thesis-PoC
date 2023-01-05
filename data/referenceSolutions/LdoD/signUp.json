@@ -1,0 +1,45 @@
+{
+    "redesign" : [ {
+      "name" : "SignupController.signup",
+      "id" : "-1",
+      "cluster" : "SignupController.signup",
+      "accessedEntities" : "",
+      "remoteInvocations" : [ 0 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "0: Text",
+      "id" : "0",
+      "cluster" : "Text",
+      "accessedEntities" : "[[\"LdoD\",\"RW\"]]",
+      "remoteInvocations" : [ 1 ],
+      "type" : "PIVOT"
+    }, {
+      "name" : "2: VirtualEdition",
+      "id" : "2",
+      "cluster" : "VirtualEdition",
+      "accessedEntities" : "[[\"Category\",\"RW\"],[\"VirtualEditionInter\",\"W\"],[\"Taxonomy\",\"RW\"],[\"RecommendationWeights\",\"RW\"],[\"VirtualEdition\",\"RW\"],[\"Tag\",\"RW\"],[\"Range\",\"RW\"],[\"Member\",\"RW\"],[\"Annotation\",\"RW\"],[\"HumanAnnotation\",\"W\"]]",
+      "remoteInvocations" : [ 3 ],
+      "type" : "RETRIABLE"
+    }, {
+      "name" : "3: ClassificationGame",
+      "id" : "3",
+      "cluster" : "ClassificationGame",
+      "accessedEntities" : "[[\"Player\",\"W\"],[\"ClassificationGameRound\",\"RW\"],[\"ClassificationGameParticipant\",\"RW\"],[\"ClassificationGame\",\"RW\"]]",
+      "remoteInvocations" : [ ],
+      "type" : "RETRIABLE"
+    }, {
+      "name" : "1: User",
+      "id" : "1",
+      "cluster" : "User",
+      "accessedEntities" : "[[\"Role\",\"RW\"],[\"LdoDUser\",\"RW\"],[\"RegistrationToken\",\"RW\"],[\"UserConnection\",\"RW\"]]",
+      "remoteInvocations" : [ 4, 2 ],
+      "type" : "RETRIABLE"
+    }, {
+      "name" : "4: ClassificationGame",
+      "id" : "4",
+      "cluster" : "ClassificationGame",
+      "accessedEntities" : "[[\"Player\",\"RW\"],[\"ClassificationGameRound\",\"RW\"],[\"ClassificationGameParticipant\",\"RW\"],[\"ClassificationGame\",\"RW\"]]",
+      "remoteInvocations" : [ ],
+      "type" : "RETRIABLE"
+    } ]
+}

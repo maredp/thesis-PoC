@@ -1,0 +1,31 @@
+{
+    "redesign" : [ {
+      "name" : "ActivityModelController.createActivity",
+      "id" : "-1",
+      "cluster" : "ActivityModelController.createActivity",
+      "accessedEntities" : "",
+      "remoteInvocations" : [ 0 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "0: Design",
+      "id" : "0",
+      "cluster" : "Design",
+      "accessedEntities" : "[[\"BlendedWorkflow\",\"RW\"],[\"Specification\",\"R\"]]",
+      "remoteInvocations" : [ 1 ],
+      "type" : "PIVOT"
+    }, {
+      "name" : "1: Models",
+      "id" : "1",
+      "cluster" : "Models",
+      "accessedEntities" : "[[\"ActivityModel\",\"RW\"],[\"Activity\",\"RW\"]]",
+      "remoteInvocations" : [ 4 ],
+      "type" : "RETRIABLE"
+    }, {
+      "name" : "4: View",
+      "id" : "4",
+      "cluster" : "View",
+      "accessedEntities" : "[[\"ActivityView\",\"R\"],[\"Position\",\"R\"]]",
+      "remoteInvocations" : [ ],
+      "type" : "RETRIABLE"
+    } ]
+}

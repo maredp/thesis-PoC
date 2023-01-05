@@ -1,0 +1,24 @@
+{
+    "redesign" : [ {
+      "name" : "GoalModelController.associateDefPathConditionToGoalAct",
+      "id" : "-1",
+      "cluster" : "GoalModelController.associateDefPathConditionToGoalAct",
+      "accessedEntities" : "",
+      "remoteInvocations" : [ 0 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "0: Design",
+      "id" : "0",
+      "cluster" : "Design",
+      "accessedEntities" : "[[\"Path\",\"RW\"],[\"BlendedWorkflow\",\"RW\"],[\"DataModel\",\"RW\"],[\"Specification\",\"R\"]]",
+      "remoteInvocations" : [ 1 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "1: Models",
+      "id" : "1",
+      "cluster" : "Models",
+      "accessedEntities" : "[[\"GoalModel\",\"R\"],[\"Goal\",\"RW\"],[\"DefPathCondition\",\"RW\"],[\"DefProductCondition\",\"RW\"]]",
+      "remoteInvocations" : [ ],
+      "type" : "PIVOT"
+    } ]
+}

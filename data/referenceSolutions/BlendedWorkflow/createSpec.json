@@ -1,0 +1,24 @@
+{
+    "redesign" : [ {
+      "name" : "SpecificationController.createSpec",
+      "id" : "-1",
+      "cluster" : "SpecificationController.createSpec",
+      "accessedEntities" : "",
+      "remoteInvocations" : [ 0 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "0: Design",
+      "id" : "0",
+      "cluster" : "Design",
+      "accessedEntities" : "[[\"BlendedWorkflow\",\"RW\"],[\"DataModel\",\"W\"],[\"Specification\",\"RW\"]]",
+      "remoteInvocations" : [ 1 ],
+      "type" : "PIVOT"
+    }, {
+      "name" : "1: Models",
+      "id" : "1",
+      "cluster" : "Models",
+      "accessedEntities" : "[[\"GoalModel\",\"W\"],[\"ConditionModel\",\"W\"],[\"ActivityModel\",\"W\"]]",
+      "remoteInvocations" : [ ],
+      "type" : "RETRIABLE"
+    } ]
+}

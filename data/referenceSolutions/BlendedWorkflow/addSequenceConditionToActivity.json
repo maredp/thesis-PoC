@@ -1,0 +1,31 @@
+{
+    "redesign" : [ {
+      "name" : "ActivityModelController.addSequenceConditionToActivity",
+      "id" : "-1",
+      "cluster" : "ActivityModelController.addSequenceConditionToActivity",
+      "accessedEntities" : "",
+      "remoteInvocations" : [ 0 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "0: Design",
+      "id" : "0",
+      "cluster" : "Design",
+      "accessedEntities" : "[[\"Path\",\"RW\"],[\"Condition\",\"R\"],[\"Entity\",\"R\"],[\"BlendedWorkflow\",\"RW\"],[\"Attribute\",\"R\"],[\"DataModel\",\"RW\"],[\"Specification\",\"R\"],[\"Rule\",\"RW\"],[\"RelationBW\",\"R\"]]",
+      "remoteInvocations" : [ 1 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "1: Models",
+      "id" : "1",
+      "cluster" : "Models",
+      "accessedEntities" : "[[\"DefPathCondition\",\"RW\"],[\"ActivityModel\",\"R\"],[\"DefProductCondition\",\"RW\"],[\"Activity\",\"RW\"]]",
+      "remoteInvocations" : [ 2 ],
+      "type" : "PIVOT"
+    }, {
+      "name" : "2: Design",
+      "id" : "2",
+      "cluster" : "Design",
+      "accessedEntities" : "[[\"Path\",\"W\"],[\"BlendedWorkflow\",\"W\"],[\"DataModel\",\"W\"],[\"Rule\",\"W\"]]",
+      "remoteInvocations" : [ ],
+      "type" : "RETRIABLE"
+    } ]
+}

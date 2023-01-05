@@ -1,0 +1,24 @@
+{
+    "redesign" : [ {
+      "name" : "ConditionModelController.createEntityDependenceCondition",
+      "id" : "-1",
+      "cluster" : "ConditionModelController.createEntityDependenceCondition",
+      "accessedEntities" : "",
+      "remoteInvocations" : [ 0 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "0: Design",
+      "id" : "0",
+      "cluster" : "Design",
+      "accessedEntities" : "[[\"Path\",\"R\"],[\"Entity\",\"R\"],[\"BlendedWorkflow\",\"RW\"],[\"DataModel\",\"R\"],[\"Dependence\",\"RW\"],[\"Product\",\"R\"],[\"Specification\",\"R\"]]",
+      "remoteInvocations" : [ 1 ],
+      "type" : "PIVOT"
+    }, {
+      "name" : "1: Models",
+      "id" : "1",
+      "cluster" : "Models",
+      "accessedEntities" : "[[\"ConditionModel\",\"RW\"]]",
+      "remoteInvocations" : [ ],
+      "type" : "RETRIABLE"
+    } ]
+}

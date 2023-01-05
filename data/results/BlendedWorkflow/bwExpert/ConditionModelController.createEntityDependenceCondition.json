@@ -1,0 +1,125 @@
+{
+  "name" : "ConditionModelController.createEntityDependenceCondition",
+  "type" : "SAGA",
+  "entities" : {
+    "Path" : "R",
+    "Entity" : "R",
+    "ConditionModel" : "RW",
+    "BlendedWorkflow" : "RW",
+    "DataModel" : "R",
+    "Dependence" : "RW",
+    "Product" : "R",
+    "Specification" : "R"
+  },
+  "entitiesPerCluster" : {
+    "Design" : [ "Path", "Entity", "BlendedWorkflow", "DataModel", "Dependence", "Product", "Specification" ],
+    "Models" : [ "ConditionModel" ]
+  },
+  "functionalityRedesigns" : [ {
+    "name" : "Original",
+    "redesign" : [ {
+      "name" : "ConditionModelController.createEntityDependenceCondition",
+      "id" : "-1",
+      "cluster" : "ConditionModelController.createEntityDependenceCondition",
+      "accessedEntities" : "",
+      "remoteInvocations" : [ 0 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "0: Design",
+      "id" : "0",
+      "cluster" : "Design",
+      "accessedEntities" : [ [ "BlendedWorkflow", "RW" ], [ "Specification", "R" ], [ "DataModel", "R" ], [ "Entity", "R" ], [ "Product", "R" ], [ "Dependence", "R" ], [ "Path", "R" ] ],
+      "remoteInvocations" : [ 1 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "1: Models",
+      "id" : "1",
+      "cluster" : "Models",
+      "accessedEntities" : [ [ "ConditionModel", "RW" ] ],
+      "remoteInvocations" : [ 2 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "2: Design",
+      "id" : "2",
+      "cluster" : "Design",
+      "accessedEntities" : [ [ "Dependence", "W" ], [ "DataModel", "R" ], [ "Specification", "R" ], [ "Product", "R" ], [ "Path", "R" ] ],
+      "remoteInvocations" : [ ],
+      "type" : "COMPENSATABLE"
+    } ],
+    "systemComplexity" : "150.0",
+    "functionalityComplexity" : "260.0",
+    "coupling" : "2.0",
+    "localTransactionsCount" : "3",
+    "initialLTsCount" : "3",
+    "sequenceChangeCount" : "0",
+    "mergedLTsCount" : "0",
+    "operationsApplied" : [ ],
+    "pivotTransaction" : "-1"
+  }, {
+    "name" : "Optimal for applying operations",
+    "redesign" : [ {
+      "name" : "ConditionModelController.createEntityDependenceCondition",
+      "id" : "-1",
+      "cluster" : "ConditionModelController.createEntityDependenceCondition",
+      "accessedEntities" : "",
+      "remoteInvocations" : [ 0 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "0: Design",
+      "id" : "0",
+      "cluster" : "Design",
+      "accessedEntities" : [ [ "BlendedWorkflow", "RW" ], [ "Specification", "R" ], [ "DataModel", "R" ], [ "Entity", "R" ], [ "Product", "R" ], [ "Dependence", "RW" ], [ "Path", "R" ] ],
+      "remoteInvocations" : [ 1 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "1: Models",
+      "id" : "1",
+      "cluster" : "Models",
+      "accessedEntities" : [ [ "ConditionModel", "RW" ] ],
+      "remoteInvocations" : [ ],
+      "type" : "COMPENSATABLE"
+    } ],
+    "systemComplexity" : "150.0",
+    "functionalityComplexity" : "198.0",
+    "coupling" : "1.0",
+    "localTransactionsCount" : "2",
+    "initialLTsCount" : "3",
+    "sequenceChangeCount" : "1",
+    "mergedLTsCount" : "1",
+    "operationsApplied" : [ "[SC 2 - 0]", "[LTM 0 - 2]" ],
+    "pivotTransaction" : "-1"
+  }, {
+    "name" : "Optimal for LTs characterization",
+    "redesign" : [ {
+      "name" : "ConditionModelController.createEntityDependenceCondition",
+      "id" : "-1",
+      "cluster" : "ConditionModelController.createEntityDependenceCondition",
+      "accessedEntities" : "",
+      "remoteInvocations" : [ 0 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "0: Design",
+      "id" : "0",
+      "cluster" : "Design",
+      "accessedEntities" : [ [ "BlendedWorkflow", "RW" ], [ "Specification", "R" ], [ "DataModel", "R" ], [ "Entity", "R" ], [ "Product", "R" ], [ "Dependence", "RW" ], [ "Path", "R" ] ],
+      "remoteInvocations" : [ 1 ],
+      "type" : "PIVOT"
+    }, {
+      "name" : "1: Models",
+      "id" : "1",
+      "cluster" : "Models",
+      "accessedEntities" : [ [ "ConditionModel", "RW" ] ],
+      "remoteInvocations" : [ ],
+      "type" : "RETRIABLE"
+    } ],
+    "systemComplexity" : "0.0",
+    "functionalityComplexity" : "195.0",
+    "coupling" : "1.0",
+    "localTransactionsCount" : "2",
+    "initialLTsCount" : "3",
+    "sequenceChangeCount" : "1",
+    "mergedLTsCount" : "1",
+    "operationsApplied" : [ "[SC 2 - 0]", "[LTM 0 - 2]" ],
+    "pivotTransaction" : "0"
+  } ]
+}

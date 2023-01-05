@@ -1,0 +1,31 @@
+{
+    "redesign" : [ {
+      "name" : "SignupController.confirmRegistration",
+      "id" : "-1",
+      "cluster" : "SignupController.confirmRegistration",
+      "accessedEntities" : "",
+      "remoteInvocations" : [ 0 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "0: Text",
+      "id" : "0",
+      "cluster" : "Text",
+      "accessedEntities" : "[[\"LdoD\",\"R\"]]",
+      "remoteInvocations" : [ 1 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "1: User",
+      "id" : "1",
+      "cluster" : "User",
+      "accessedEntities" : "[[\"RegistrationToken\",\"R\"],[\"LdoDUser\",\"R\"],[\"LdoDUser\",\"W\"],[\"RegistrationToken\",\"W\"]]",
+      "remoteInvocations" : [ 2 ],
+      "type" : "PIVOT"
+    }, {
+      "name" : "2: Text",
+      "id" : "2",
+      "cluster" : "Text",
+      "accessedEntities" : "[[\"LdoD\",\"W\"]]",
+      "remoteInvocations" : [ ],
+      "type" : "RETRIABLE"
+    } ]
+}

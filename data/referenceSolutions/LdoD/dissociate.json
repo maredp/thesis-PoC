@@ -1,0 +1,108 @@
+    {
+      "redesign" : [ {
+        "name" : "VirtualEditionController.dissociate",
+        "id" : "-1",
+        "cluster" : "VirtualEditionController.dissociate",
+        "accessedEntities" : "",
+        "remoteInvocations" : [ 0 ],
+        "type" : "COMPENSATABLE"
+      }, {
+        "name" : "5: User",
+        "id" : "5",
+        "cluster" : "User",
+        "accessedEntities" : "[[\"LdoDUser\",\"W\"]]",
+        "remoteInvocations" : [ ],
+        "type" : "RETRIABLE"
+      }, {
+        "name" : "18: User",
+        "id" : "18",
+        "cluster" : "User",
+        "accessedEntities" : "[[\"LdoDUser\",\"W\"]]",
+        "remoteInvocations" : [ ],
+        "type" : "RETRIABLE"
+      }, {
+        "name" : "25: User",
+        "id" : "25",
+        "cluster" : "User",
+        "accessedEntities" : "[[\"LdoDUser\",\"W\"]]",
+        "remoteInvocations" : [ ],
+        "type" : "RETRIABLE"
+      }, {
+        "name" : "38: User",
+        "id" : "38",
+        "cluster" : "User",
+        "accessedEntities" : "[[\"LdoDUser\",\"W\"]]",
+        "remoteInvocations" : [ ],
+        "type" : "RETRIABLE"
+      }, {
+        "name" : "0: VirtualEdition",
+        "id" : "0",
+        "cluster" : "VirtualEdition",
+        "accessedEntities" : "[[\"Category\",\"R\"],[\"VirtualEditionInter\",\"R\"],[\"Tag\",\"R\"]]",
+        "remoteInvocations" : [ 1 ],
+        "type" : "COMPENSATABLE"
+      }, {
+        "name" : "1: User",
+        "id" : "1",
+        "cluster" : "User",
+        "accessedEntities" : "[[\"LdoDUser\",\"R\"]]",
+        "remoteInvocations" : [ 2 ],
+        "type" : "PIVOT"
+      }, {
+        "name" : "2: VirtualEdition",
+        "id" : "2",
+        "cluster" : "VirtualEdition",
+        "accessedEntities" : "[[\"Category\",\"RW\"],[\"VirtualEditionInter\",\"W\"],[\"Taxonomy\",\"RW\"],[\"VirtualEdition\",\"W\"],[\"Tag\",\"RW\"],[\"HumanAnnotation\",\"W\"]]",
+        "remoteInvocations" : [ 3, 18 ],
+        "type" : "RETRIABLE"
+      }, {
+        "name" : "3: ClassificationGame",
+        "id" : "3",
+        "cluster" : "ClassificationGame",
+        "accessedEntities" : "[[\"Player\",\"W\"],[\"ClassificationGameRound\",\"RW\"],[\"ClassificationGameParticipant\",\"RW\"],[\"ClassificationGame\",\"RW\"]]",
+        "remoteInvocations" : [ 5, 4 ],
+        "type" : "RETRIABLE"
+      }, {
+        "name" : "4: VirtualEdition",
+        "id" : "4",
+        "cluster" : "VirtualEdition",
+        "accessedEntities" : "[[\"VirtualEditionInter\",\"R\"],[\"Tag\",\"R\"],[\"Annotation\",\"R\"],[\"HumanAnnotation\",\"RW\"]]",
+        "remoteInvocations" : [ 6 ],
+        "type" : "RETRIABLE"
+      }, {
+        "name" : "6: Text",
+        "id" : "6",
+        "cluster" : "Text",
+        "accessedEntities" : "[[\"SimpleText\",\"W\"]]",
+        "remoteInvocations" : [ 7 ],
+        "type" : "RETRIABLE"
+      }, {
+        "name" : "7: VirtualEdition",
+        "id" : "7",
+        "cluster" : "VirtualEdition",
+        "accessedEntities" : "[[\"Category\",\"RW\"],[\"VirtualEditionInter\",\"W\"],[\"Taxonomy\",\"RW\"],[\"VirtualEdition\",\"W\"],[\"Tag\",\"RW\"],[\"HumanAnnotation\",\"RW\"]]",
+        "remoteInvocations" : [ 8, 25 ],
+        "type" : "RETRIABLE"
+      }, {
+        "name" : "8: ClassificationGame",
+        "id" : "8",
+        "cluster" : "ClassificationGame",
+        "accessedEntities" : "[[\"Player\",\"W\"],[\"ClassificationGameRound\",\"RW\"],[\"ClassificationGameParticipant\",\"RW\"],[\"ClassificationGame\",\"RW\"]]",
+        "remoteInvocations" : [ 38, 9 ],
+        "type" : "RETRIABLE"
+      }, {
+        "name" : "9: VirtualEdition",
+        "id" : "9",
+        "cluster" : "VirtualEdition",
+        "accessedEntities" : "[[\"VirtualEditionInter\",\"W\"],[\"Range\",\"RW\"],[\"Annotation\",\"RW\"]]",
+        "remoteInvocations" : [ 10 ],
+        "type" : "RETRIABLE"
+      }, {
+        "name" : "10: User",
+        "id" : "10",
+        "cluster" : "User",
+        "accessedEntities" : "[[\"LdoDUser\",\"W\"]]",
+        "remoteInvocations" : [ ],
+        "type" : "RETRIABLE"
+      } ]
+}

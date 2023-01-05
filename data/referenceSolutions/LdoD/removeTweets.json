@@ -1,0 +1,38 @@
+{
+    "redesign" : [ {
+      "name" : "AdminController.removeTweets",
+      "id" : "-1",
+      "cluster" : "AdminController.removeTweets",
+      "accessedEntities" : "",
+      "remoteInvocations" : [ 0 ],
+      "type" : "COMPENSATABLE"
+    }, {
+      "name" : "0: Text",
+      "id" : "0",
+      "cluster" : "Text",
+      "accessedEntities" : "[[\"LdoD\",\"RW\"],[\"Fragment\",\"W\"],[\"FragInter\",\"W\"]]",
+      "remoteInvocations" : [ 1 ],
+      "type" : "PIVOT"
+    }, {
+      "name" : "1: Twitter",
+      "id" : "1",
+      "cluster" : "Twitter",
+      "accessedEntities" : "[[\"AwareAnnotation\",\"RW\"],[\"LastTwitterID\",\"RW\"],[\"InfoRange\",\"RW\"],[\"Tweet\",\"RW\"],[\"Citation\",\"RW\"],[\"TwitterCitation\",\"RW\"]]",
+      "remoteInvocations" : [ 2 ],
+      "type" : "RETRIABLE"
+    }, {
+      "name" : "2: VirtualEdition",
+      "id" : "2",
+      "cluster" : "VirtualEdition",
+      "accessedEntities" : "[[\"VirtualEditionInter\",\"W\"],[\"Range\",\"RW\"],[\"Annotation\",\"RW\"]]",
+      "remoteInvocations" : [ 9 ],
+      "type" : "RETRIABLE"
+    }, {
+      "name" : "9: User",
+      "id" : "9",
+      "cluster" : "User",
+      "accessedEntities" : "[[\"LdoDUser\",\"W\"]]",
+      "remoteInvocations" : [ ],
+      "type" : "RETRIABLE"
+    } ]
+}
